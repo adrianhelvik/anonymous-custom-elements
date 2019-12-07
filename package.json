@@ -1,7 +1,7 @@
 {
   "name": "anonymous-custom-elements-polyfill",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "polyfill.js",
   "author": "Adrian Helvik <adrian.helvik@specifique.no>",
   "license": "MIT"
 }

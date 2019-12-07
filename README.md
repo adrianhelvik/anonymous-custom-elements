@@ -25,12 +25,8 @@ Returns the same value as innerHTML.
 ## Usage
 *WARNING: Do not use in production before standardization.*
 
-```bash
-yarn add anonymous-custom-elements-polyfill
-```
-
 ```javascript
-import 'anonymous-custom-elements-polyfill'
+import 'https://github.com/adrianhelvik/anonymous-custom-elements/polyfill.js'
 
 class MyAnonymousElement extends AnonymousElement {
   connectedCallback() {

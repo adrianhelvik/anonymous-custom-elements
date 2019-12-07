@@ -1,4 +1,4 @@
-import './index.js'
+import './polyfill.js'
 
 document.body.style.fontFamily = 'sans-serif'
 
