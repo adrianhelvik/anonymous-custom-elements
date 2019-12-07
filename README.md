@@ -42,7 +42,8 @@ Returns the same value as innerHTML.
 </body>
 ```
 
-[Live example](https://raw.githack.com/adrianhelvik/anonymous-custom-elements/master/example.html)
+[Live example](
+https://rawcdn.githack.com/adrianhelvik/anonymous-custom-elements/67fffa0dc4700b978013786898dec4ffe40a392b/example.html)
 
 
 ## Polyfill constraints
