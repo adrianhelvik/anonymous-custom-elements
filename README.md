@@ -31,7 +31,6 @@ Returns the same value as innerHTML.
 <body>
   <script src="http://cdn.jsdelivr.net/gh/adrianhelvik/anonymous-custom-elements/polyfill.js"></script>
   <script>
-
     class MyAnonymousElement extends AnonymousElement {
       connectedCallback() {
         this.textContent = 'I am anonymous'
