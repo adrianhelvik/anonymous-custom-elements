@@ -22,7 +22,7 @@ Readonly property containing an empty `DOMString`.
 ### outerHTML
 Returns the same value as innerHTML.
 
-## Usage
+## Polyfill usage
 *WARNING: Do not use in production before standardization.*
 
 ```html
