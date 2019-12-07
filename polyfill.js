@@ -20,9 +20,9 @@
       return defineElement.apply(window.customElements, args)
     }
 
-    class AnonymousElement extends HTMLElement {
-      static [isAnonymous] = true
-    }
+    class AnonymousElement extends HTMLElement {}
+
+    AnonymousElement[isAnonymous] = true
 
     window.AnonymousElement = new Proxy(AnonymousElement, {
       construct: function(target, args, newTarget) {
