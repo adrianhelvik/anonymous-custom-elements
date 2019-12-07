@@ -17,7 +17,7 @@ AnonymousElement extends HTMLElement and inherits all
 properties not mentioned in this proposal.
 
 ### tagName
-Readonly property containing and empty `DOMString`.
+Readonly property containing an empty `DOMString`.
 
 ### outerHTML
 Returns the same value as innerHTML.
