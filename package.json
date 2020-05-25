@@ -3,5 +3,25 @@
   "version": "1.0.0",
   "main": "polyfill.js",
   "author": "Adrian Helvik <adrian.helvik@specifique.no>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "jest --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^26.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6"
+  },
+  "babel": {
+    "presets": [
+      ["@babel/preset-env", {
+        "targets": {
+          "node": 8
+        }
+      }]
+    ]
+  }
 }

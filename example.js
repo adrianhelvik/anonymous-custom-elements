@@ -1,15 +1,11 @@
-import './polyfill.js'
+import polyfill from './polyfill.js'
+
+polyfill({ completePolyfill: true })
 
 document.body.style.fontFamily = 'sans-serif'
 
 class MyAnonymousElement extends AnonymousElement {
   connectedCallback() {
-    Object.assign(this.style, {
-      background: 'lightgreen',
-      padding: '20px',
-      display: 'block',
-    })
-
     this.textContent = 'Created anonymous element'
   }
 }
@@ -24,14 +20,22 @@ class CanNotBeDefined extends AnonymousElement {
   connectedCallback() {
     if (this.tagName === 'foo-bar') {
       this.textContent = 'SHOULD NOT HAPPEN'
+    } else {
+      this.textContent = '. And it went okay!'
     }
   }
 }
 
 try {
   const outer = document.createElement('div')
+  Object.assign(outer.style, {
+    background: 'lightgreen',
+    padding: '20px',
+    display: 'block',
+  })
   document.body.appendChild(outer)
-  outer.appendChild(new MyAnonymousElement())
+  var anonymousElement = new MyAnonymousElement()
+  outer.appendChild(anonymousElement)
   try {
     outer.appendChild(new CanNotBeAnonymous())
   } catch (e) {}
@@ -47,3 +51,27 @@ try {
   div.textContent = e.stack
   document.body.appendChild(div)
 }
+
+const code = document.createElement('pre')
+
+code.textContent = `
+-------------------------------------
+------ document.body.innerHTML ------
+-------------------------------------
+
+${document.body.innerHTML}
+
+-------------------------------------
+------ document.body.outerHTML ------
+-------------------------------------
+
+${document.body.outerHTML}
+
+----------------------------------------
+------ anonymousElement.outerHTML ------
+----------------------------------------
+
+${anonymousElement.outerHTML}
+`
+
+document.body.appendChild(code)
