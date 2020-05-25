@@ -23,7 +23,7 @@ Readonly property containing an empty `DOMString`.
 Returns the same value as innerHTML.
 
 ## Polyfill usage
-*WARNING: Do not use in production before standardization.*
+*WARNING: Do not use in production.*
 
 ```html
 <!doctype html>
