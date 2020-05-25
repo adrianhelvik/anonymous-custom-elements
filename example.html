@@ -1,8 +1,13 @@
 <!doctype html>
 <meta charset="utf-8">
 <body>
-  <script src="https://raw.githack.com/adrianhelvik/anonymous-custom-elements/master/polyfill.js"></script>
-  <script>
+  <script type="module">
+    import polyfill from 'https://raw.githack.com/adrianhelvik/anonymous-custom-elements/master/polyfill.js?1'
+
+    polyfill({
+      completePolyfill: true
+    })
+
     class MyAnonymousElement extends AnonymousElement {
       connectedCallback() {
         this.textContent = 'I am anonymous'
